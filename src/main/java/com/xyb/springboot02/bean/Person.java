@@ -8,7 +8,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
+ * 将配置文件中配置的每一个属性的值，映射到这个组件中
+ * @ConfigurationProperties：告诉spring boot将本类中的所有属性和配置文件中的相关配置进行绑定
+ *  prefix = "person" ：配置文件中哪一个下面的所有属性一一映射
+ *  只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能
  */
 @Component
 @ConfigurationProperties(prefix = "person")
