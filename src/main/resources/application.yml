@@ -2,17 +2,16 @@ server:
   port: 8090
 
 
-
-person:
-  lastName: hello
-  age: 19
-  isBoss: false
-  birth: 1998/4/2
-  maps: {k: v,k2: v2}
-  lists:
-    - dog
-    - cat
-    - pig
-  dog:
-    name: 小
-    age: 2
+#person:
+#  lastName: hello
+#  age: 19
+#  isBoss: false
+#  birth: 1998/4/2
+#  maps: {k: v,k2: v2}
+#  lists:
+#    - dog
+#    - cat
+#    - pig
+#  dog:
+#    name: 小
+#    age: 2

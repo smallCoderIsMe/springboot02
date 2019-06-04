@@ -5,14 +5,6 @@ public class Dog {
     private String name;
     private Integer age;
 
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
-
     public String getName() {
         return name;
     }
@@ -25,7 +17,16 @@ public class Dog {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public void setAge(Integer age) {
         this.age = age;
     }
+
 }
