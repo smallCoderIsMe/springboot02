@@ -1,7 +1,18 @@
 server:
   port: 8090
-
-
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8080
+spring:
+  profiles: dev
+---
+server:
+  port: 8070
+spring:
+  profiles: prod  #指定属于那种环境
 #person:
 #  lastName: hello
 #  age: 19

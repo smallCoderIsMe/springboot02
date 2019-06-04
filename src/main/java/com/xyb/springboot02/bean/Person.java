@@ -22,7 +22,7 @@ import java.util.Map;
 
 //@Validated
 @Component
-@PropertySource(value = {"classpath:person.properties"})
+//@PropertySource(value = {"classpath:person.properties"})
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
