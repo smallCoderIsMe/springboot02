@@ -3,7 +3,10 @@ package com.xyb.springboot02.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +18,8 @@ import java.util.Map;
  *  只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能
  */
 @Component
-//@ConfigurationProperties(prefix = "person")
+@ConfigurationProperties(prefix = "person")
+@Validated
 public class Person {
 
     /**
@@ -23,11 +27,12 @@ public class Person {
      *      <property name="lastName" value="字面值/${key}从环境变量，配置文件中获取/#{SpEL}"></property>
      * <bean/>
      */
-    @Value("${person.last-name}")
+    //@Value("${person.last-name}")
+    @Email
     private String lastName;
-    @Value("#{2*11}")
+    //@Value("#{2*11}")
     private Integer age;
-    @Value("true")
+    //@Value("true")
     private boolean isBoss;
     private Date birth;
 
