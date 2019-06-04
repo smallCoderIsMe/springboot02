@@ -2,6 +2,7 @@ package com.xyb.springboot02.bean;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -16,10 +17,13 @@ import java.util.Map;
  * @ConfigurationProperties：告诉spring boot将本类中的所有属性和配置文件中的相关配置进行绑定
  *  prefix = "person" ：配置文件中哪一个下面的所有属性一一映射
  *  只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能
+ *  @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取
  */
+
+//@Validated
 @Component
+@PropertySource(value = {"classpath:person.properties"})
 @ConfigurationProperties(prefix = "person")
-@Validated
 public class Person {
 
     /**
